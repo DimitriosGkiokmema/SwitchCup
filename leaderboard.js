@@ -63,4 +63,3 @@ function createBoardEntry(displayArea, name, points, rank) {
 }
 
 createLeaderBoard();
-// test for github push
