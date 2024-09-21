@@ -29,8 +29,13 @@
 
 .left_text {
     float: left;
+    padding: 10px;
+    padding-left: 30px;
+    
 }
 
 .right_text {
     float: right;
+    padding: 10px;
+    padding-right: 30px;
 }
