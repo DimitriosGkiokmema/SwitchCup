@@ -13,7 +13,7 @@
 }
 
 #fall {
-    width: max(500px, 50vw);
+    width: min(500px, 50vw);
     margin: 0 auto;
 }
 
