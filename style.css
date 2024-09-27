@@ -1,14 +1,14 @@
 #pageTitle {
     text-align: center;
     font-family: monospace;
-    font-size: 50px;
+    font-size: 60px;
     padding: 25px;
 }
 
 #fall_heading {
     text-align: center;
     font-family: monospace;
-    font-size: 30px;
+    font-size: 40px;
     padding-bottom: 20px
 }
 
@@ -21,11 +21,10 @@
     background-color: rgb(255, 215, 0);
     text-align: center;
     font-family: monospace;
-    font-size: 20px;
+    font-size: 3vw;
     border-radius: 5px;
     margin-top: 5px;
     overflow: hidden;
-    padding: 10px
 }
 
 .left_text {
@@ -50,12 +49,27 @@
     grid-area: cloud_img_flipped;
     width: 15vw;
     transform: scaleX(-1);
+    justify-self: end;
+}
+
+.com_logo {
+    grid-area: com_logo;
+    width: 10vw;
 }
 
 .welcome_message {
     grid-area: welcome_message;
     text-align: center;
-    width: max(70vw, 300px);
+    margin: auto;
+    width: max(50vw, 300px);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+.fall_leaderboard {
+    grid-area: fall_leaderboard;
 }
 
 .mario_jumping {
@@ -66,7 +80,7 @@
 .bowser_kart {
     grid-area: bowser_kart;
     height: min(25vw, 200px);
-    align-items: end;
+    justify-self: end;
 }
 
 .site_body {
@@ -76,4 +90,26 @@
     "welcome_message welcome_message welcome_message"
     "mario_jumping fall_leaderboard bowser_kart";
     align-items: center;
+}
+
+@media (max-width: 500px) {
+    .site_body {
+        grid-template-areas:
+        "cloud_img site_header cloud_img_flipped"
+        "welcome_message welcome_message welcome_message"
+        "fall_leaderboard fall_leaderboard fall_leaderboard"
+        " mario_jumping bowser_kart bowser_kart";
+    }
+
+    .left_text {
+        padding-right: 0px;
+    }
+
+    .right_text {
+        padding-left: 0px;
+    }
+
+    .bowser_kart {
+        justify-self: end;
+    }
 }
