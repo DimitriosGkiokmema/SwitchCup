@@ -9,11 +9,12 @@
     text-align: center;
     font-family: monospace;
     font-size: 40px;
-    padding-bottom: 20px
+    padding: 5px;
+    margin: 30px;
 }
 
 #fall {
-    width: min(500px, 50vw);
+    width: 50vw;
     margin: 0 auto;
 }
 
@@ -62,6 +63,7 @@
     text-align: center;
     margin: auto;
     width: max(50vw, 300px);
+    margin-top: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
     border-radius: 15px;
@@ -70,6 +72,14 @@
 
 .fall_leaderboard {
     grid-area: fall_leaderboard;
+}
+
+.pwr_block{
+    grid-area: pwr_block;
+    height: min(5vw, 50px);
+    justify-self: start;
+    align-self: end;
+    margin-left: 50px;
 }
 
 .mario_jumping {
@@ -83,13 +93,34 @@
     justify-self: end;
 }
 
+.link_img {
+    grid-area: link_img;
+    height: min(25vw, 200px);
+    justify-self:center;
+}
+
 .site_body {
     display: grid;
     grid-template-areas:
     "cloud_img site_header cloud_img_flipped"
     "welcome_message welcome_message welcome_message"
+    "pwr_block fall_leaderboard link_img"
     "mario_jumping fall_leaderboard bowser_kart";
     align-items: center;
+}
+
+.sewer_pipe {
+    width: min(10vw, 100px);
+    margin-left: 20px;
+}
+
+.brick_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.brick_row img{
+    width: 25%;
 }
 
 @media (max-width: 500px) {
@@ -98,11 +129,12 @@
         "cloud_img site_header cloud_img_flipped"
         "welcome_message welcome_message welcome_message"
         "fall_leaderboard fall_leaderboard fall_leaderboard"
-        " mario_jumping bowser_kart bowser_kart";
+        " mario_jumping link_img bowser_kart";
     }
 
     .left_text {
         padding-right: 0px;
+        background-color: red;
     }
 
     .right_text {
@@ -110,6 +142,28 @@
     }
 
     .bowser_kart {
+        margin-top: 20px;
         justify-self: end;
+    }
+
+    .mario_jumping {
+        justify-self: start;
+        align-self: end;
+    }
+
+    .link_img {
+        display: none;
+    }
+
+    .pwr_block {
+        display: none;
+    }
+
+    .sewer_pipe {
+        display: none;
+    }
+
+    #fall {
+        width:80vw;
     }
 }
