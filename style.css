@@ -114,15 +114,6 @@
     margin-left: 20px;
 }
 
-.brick_row {
-    display: flex;
-    flex-direction: row;
-}
-
-.brick_row img{
-    width: 25%;
-}
-
 @media (max-width: 500px) {
     .site_body {
         grid-template-areas:
@@ -134,7 +125,6 @@
 
     .left_text {
         padding-right: 0px;
-        background-color: red;
     }
 
     .right_text {
@@ -164,6 +154,16 @@
     }
 
     #fall {
-        width:80vw;
+        width:100vw;
     }
 }
+
+.brick_wall {
+    width: 100%;
+    height: 100px;
+    background-image: url("Images/mario_bricks.png");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    background-position: top left;
+}
+  
