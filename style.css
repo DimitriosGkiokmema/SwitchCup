@@ -10,7 +10,8 @@
     font-family: monospace;
     font-size: 40px;
     padding: 5px;
-    margin: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #fall {
@@ -154,16 +155,20 @@
     }
 
     #fall {
-        width:100vw;
+        width: 90%;
+    }
+
+    .fall_leaderboard {
+        width: 80%;
     }
 }
 
 .brick_wall {
     width: 100%;
-    height: 100px;
+    height: 10vw;
     background-image: url("Images/mario_bricks.png");
     background-repeat: repeat;
-    background-size: 100px 100px;
+    background-size: 10vw 10vw;
     background-position: top left;
 }
   
