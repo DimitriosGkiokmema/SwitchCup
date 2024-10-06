@@ -2,7 +2,7 @@
     text-align: center;
     font-family: monospace;
     font-size: 60px;
-    padding: 25px;
+    margin: auto;
 }
 
 #fall_heading {
@@ -10,8 +10,7 @@
     font-family: monospace;
     font-size: 40px;
     padding: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin: 0px 30px;
 }
 
 #fall {
@@ -62,6 +61,7 @@
 .welcome_message {
     grid-area: welcome_message;
     text-align: center;
+    justify-self: center;
     margin: auto;
     width: max(50vw, 300px);
     margin-top: 30px;
