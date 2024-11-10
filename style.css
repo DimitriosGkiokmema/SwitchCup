@@ -5,7 +5,7 @@
     margin: auto;
 }
 
-#fall_heading {
+#heading {
     text-align: center;
     font-family: monospace;
     font-size: 40px;
@@ -13,7 +13,7 @@
     margin: 0px 30px;
 }
 
-#fall {
+#entries {
     width: 50vw;
     margin: 0 auto;
 }
@@ -71,8 +71,11 @@
     font-size: 20px;
 }
 
-.fall_leaderboard {
-    grid-area: fall_leaderboard;
+.leaderboard {
+    grid-area: leaderboard;
+    display: flex;
+    justify-content:end;
+    align-items: center;
 }
 
 .pwr_block{
@@ -105,8 +108,8 @@
     grid-template-areas:
     "cloud_img site_header cloud_img_flipped"
     "welcome_message welcome_message welcome_message"
-    "pwr_block fall_leaderboard link_img"
-    "mario_jumping fall_leaderboard bowser_kart";
+    "pwr_block leaderboard link_img"
+    "mario_jumping leaderboard bowser_kart";
     align-items: center;
 }
 
@@ -120,7 +123,7 @@
         grid-template-areas:
         "cloud_img site_header cloud_img_flipped"
         "welcome_message welcome_message welcome_message"
-        "fall_leaderboard fall_leaderboard fall_leaderboard"
+        "leaderboard leaderboard leaderboard"
         " mario_jumping link_img bowser_kart";
     }
 
@@ -154,11 +157,11 @@
         display: none;
     }
 
-    #fall {
+    #entries {
         width: 90%;
     }
 
-    .fall_leaderboard {
+    .leaderboard {
         width: 80%;
     }
 }
@@ -171,4 +174,3 @@
     background-size: 10vw 10vw;
     background-position: top left;
 }
-  
