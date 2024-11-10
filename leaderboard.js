@@ -13,7 +13,7 @@ function createLeaderBoard() {
 
         const displayArea = document.getElementById('entries');
         var rank = 1;
-        while (entries.length > 0) {
+        while (entries.length > 1) {
             var max = 0;
             for (let i = 1; i < entries.length; i++) {
                 if (parseInt(entries[i][1]) > parseInt(entries[max][1])) {
@@ -21,6 +21,7 @@ function createLeaderBoard() {
                 }
             }
             createBoardEntry(displayArea, entries[max][0], entries[max][1], rank);
+            console.log(entries[max]);
             entries.splice(max, 1);
             rank += 1;
         }
@@ -52,12 +53,6 @@ function createBoardEntry(displayArea, name, points, rank) {
     //     listItem.style.backgroundColor = 'blue';
     // }
 
-    listItem.appendChild(left);
-    listItem.appendChild(right);
-    displayArea.appendChild(listItem);
-}
-
-createLeaderBoard();
     listItem.appendChild(left);
     listItem.appendChild(right);
     displayArea.appendChild(listItem);
