@@ -74,9 +74,10 @@
 .leaderboard {
     grid-area: leaderboard;
     display: flex;
-    justify-content:end;
+    flex-direction: column; /* Add this line to align items vertically */
     align-items: center;
 }
+
 
 .pwr_block{
     grid-area: pwr_block;
