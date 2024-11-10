@@ -5,28 +5,23 @@ function createLeaderBoard() {
         const rows = text.split('\n');
         const file = rows.map(row => row.split(','));
 
-        var fall_entries = [];
-        var winter_entries = [];
-        var curr_sem = fall_entries;
+        var entries = [];
 
         file.forEach((line) => {
-            if (line[0] == 'winter') {
-                curr_sem = winter_entries;
-            }
-            curr_sem.push([line[1], line[2]]);
+            entries.push([line[0], line[1]]);
         });
 
-        const displayArea = document.getElementById('fall');
+        const displayArea = document.getElementById('entries');
         var rank = 1;
-        while (fall_entries.length > 0) {
+        while (entries.length > 0) {
             var max = 0;
-            for (let i = 1; i < fall_entries.length; i++) {
-                if (parseInt(fall_entries[i][1]) > parseInt(fall_entries[max][1])) {
+            for (let i = 1; i < entries.length; i++) {
+                if (parseInt(entries[i][1]) > parseInt(entries[max][1])) {
                     max = i;
                 }
             }
-            createBoardEntry(displayArea, fall_entries[max][0], fall_entries[max][1], rank);
-            fall_entries.splice(max, 1);
+            createBoardEntry(displayArea, entries[max][0], entries[max][1], rank);
+            entries.splice(max, 1);
             rank += 1;
         }
     })
@@ -43,7 +38,7 @@ function createBoardEntry(displayArea, name, points, rank) {
     right.textContent = points;
     listItem.className = 'boardEntry';
 
-    // Sets different colours for top three, but idk what colour the rest should be
+    // // Sets different colours for top three, but idk what colour the rest should be
     // if (rank == 1) {
     //     listItem.style.backgroundColor = 'rgb(255, 215, 0)'; // gold
     // }
@@ -57,6 +52,12 @@ function createBoardEntry(displayArea, name, points, rank) {
     //     listItem.style.backgroundColor = 'blue';
     // }
 
+    listItem.appendChild(left);
+    listItem.appendChild(right);
+    displayArea.appendChild(listItem);
+}
+
+createLeaderBoard();
     listItem.appendChild(left);
     listItem.appendChild(right);
     displayArea.appendChild(listItem);
